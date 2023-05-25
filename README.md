@@ -37,6 +37,10 @@ source venv/bin/activate
 # 4. install the Python dependencies:
 pip install -r requirements.txt
 
+# 4.1 at this point you may want to run the following before continuing:
+deactivate
+source venv/bin/activate
+
 # 5.1 install the Node.js dependencies using pnpm. If you don't have pnpm installed, you can install it globally by running:
 npm install -g pnpm
 
