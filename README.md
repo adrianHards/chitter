@@ -22,7 +22,7 @@ CREATE DATABASE chitter_test;
 ### ENV
 1. Open a terminal and navigate to the root folder of the cloned repository.
 2. `touch .env`
-3. copy, paste and save the following (for testing purposes only) `SECRET_KEY='my_secret_key_value'`
+3. copy, paste and save the following (_for testing purposes only_) `SECRET_KEY='my_secret_key_value'`
 
 ### App
 1. Open a terminal and navigate to the root folder of the cloned repository.
