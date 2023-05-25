@@ -21,7 +21,7 @@ CREATE DATABASE chitter_test;
 
 ### ENV
 1. Open a terminal and navigate to the root folder of the cloned repository.
-2. `echo "SECRET_KEY='my_secret_key_value'" | tee .env
+2. run `echo "SECRET_KEY='my_secret_key_value'" | tee .env`
 
 ### App
 1. Open a terminal and navigate to the root folder of the cloned repository.
