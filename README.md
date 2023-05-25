@@ -4,7 +4,7 @@
 
 # Chitter
 
-A Twitter clone built using WebSocket and Peewee ORM. Users are able to post and interact with messages in real-time!
+A Twitter clone built using WebSocket and [Peewee ORM](https://docs.peewee-orm.com/en/latest/peewee/quickstart.html). Users are able to post and interact with messages in real-time!
 
 ## Installation
 
