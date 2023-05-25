@@ -56,3 +56,6 @@ python app.py
 This should start the server, and you should see output indicating that the app is running locally.
 
 8. Open a web browser and visit [http://localhost:5000](http://localhost:5000) to see the app in action.
+
+### WebSocket
+Be sure to open the app in two different browsers (or one window in incognito mode) to test out WebSocket. You'll need two different user accounts in order to see it in action. Have fun!
