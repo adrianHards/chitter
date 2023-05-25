@@ -42,7 +42,7 @@ pnpm install
 # 6. build the Tailwind CSS styles:
 pnpm run build:css --watch
 
-# 7. start the Flask web server:
+# 7. in another terminal tab from the same root folder, start the Flask web server:
 python app.py
 ```
 
