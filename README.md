@@ -11,7 +11,6 @@ A Twitter clone built using WebSocket and Peewee ORM. Users are able to post and
 Please ensure that you have `Python` and `Node.js` installed on your system. The following instructions were written for macOS/Linux users.
 
 ### Database
-
 Open a terminal, enter `psql`, and then the following commands:
 ```sql
 CREATE DATABASE chitter;
@@ -19,6 +18,11 @@ CREATE DATABASE chitter_test;
 \l
 \q
 ```
+
+### ENV
+1. Open a terminal and navigate to the root folder of the cloned repository.
+2. `touch .env`
+3. copy, paste and save the following (for testing purposes only) `SECRET_KEY='my_secret_key_value'`
 
 ### App
 1. Open a terminal and navigate to the root folder of the cloned repository.
