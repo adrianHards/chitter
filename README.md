@@ -4,6 +4,8 @@
 
 # Chitter
 
+A Twitter clone built using WebSocket and Peewee ORM. Users are able to post and interact with messages in real-time!
+
 ## Installation
 
 Please ensure that you have `Python` and `Node.js` installed on your system. The following instructions were written for macOS/Linux users.
