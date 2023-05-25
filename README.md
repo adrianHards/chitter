@@ -17,6 +17,7 @@ Open a terminal, enter `psql`, and then the following commands:
 CREATE DATABASE chitter;
 CREATE DATABASE chitter_test;
 \l
+\q
 ```
 
 ### App
