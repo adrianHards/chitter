@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+{% block body %}
+
+<div class="h-screen mt-16 relative">
+  <div class="h-3/5 overflow-y-auto overflow-x-hidden">
+    <ul id="message-list" class="list-none p-0">
+      {% for message in message_list %}
+      <li>{% include "messages/message.html" %}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  <div id="peep" class="absolute bottom w-full pt-4">
+    {% include "messages/peep.html" %}
+  </div>
+</div>
+
+<script>
+  localStorage.setItem('current_username', "{{ user }}");
+
+  const socket = io();
+
+  const sendMessage = () => {
+    if (localStorage.getItem('current_username') === 'None') {
+      flashMessage("Please log in to peep")
+    }
+    const message = document.getElementById('message').value;
+
+    socket.emit('message', message);
+    clearMessage()
+  };
+
+  const flashMessage = (message) => {
+    fetch('/static/flash.html')
+      .then(response => response.text())
+      .then(html => {
+        html = html.replace('MESSAGE_PLACEHOLDER', message);
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = html;
+        const flashElement = document.querySelector("flash");
+        flashElement.appendChild(tempDiv);
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+  }
+
+  const clearMessage = () => {
+    const messageInput = document.getElementById('message')
+    messageInput.value = ''
+  }
+
+  socket.on('new_message', (data) => {
+    const messageList = document.getElementById('message-list');
+    const bg_color = (localStorage.getItem('current_username') === data.username) ? 'bg-white' : 'bg-blue-200';
+
+    fetch('/static/message_websocket.html')
+      .then(response => response.text())
+      .then(html => {
+        // Replace placeholders with actual data
+        html = html.replace('USERNAME_PLACEHOLDER', data.username);
+        html = html.replace('USERNAME_MENTION_PLACEHOLDER', `@${data.username}`);
+        html = html.replace('CONTENT_PLACEHOLDER', data.content);
+        html = html.replace('PUB_DATE_PLACEHOLDER', data.pub_date);
+
+        // Create a temporary div to hold the parsed HTML
+        const tempDiv = document.createElement('div');
+        tempDiv.innerHTML = html;
+
+        // Insert the new message at the top of the list
+        messageList.insertBefore(tempDiv.firstChild, messageList.firstElementChild);
+
+        const newMessageElement = document.getElementById('bg-color');
+        newMessageElement.classList.add(bg_color)
+
+      })
+      .catch(error => {
+        console.error('Error:', error);
+      });
+  });
+</script>
+{% endblock %}

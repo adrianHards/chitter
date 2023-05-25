@@ -1,0 +1,20 @@
+@tailwind base;
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.fadeOut {
+  animation: fadeOut 2s ease-in-out;
+  animation-fill-mode: forwards;
+  animation-delay: 3s;
+}
+
+@tailwind components;
+@tailwind utilities;
