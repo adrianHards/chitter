@@ -4,4 +4,3 @@ __pycache__
 screenshot.png
 venv/
 .env
-.gitignore
