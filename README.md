@@ -4,7 +4,7 @@
 
 # Chitter
 
-### Installation
+## Installation
 
 Please ensure that you have `Python` and `Node.js` installed on your system. The following instructions were written for macOS/Linux users.
 
