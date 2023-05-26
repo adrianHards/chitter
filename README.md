@@ -65,6 +65,26 @@ This should start the server, and you should see output indicating that the app 
 
 Be sure to open the app in two different browsers (or with one window in incognito mode) to test out WebSocket. You'll need to create two different user accounts in order to see it in action. Have fun!
 
+## User Stories
+
+```
+As a User
+So that I can let people know what I am doing
+I want to post a message (peep) to chitter
+
+As a User
+So that I can see what others are saying
+I want to see all peeps in reverse chronological order and in real time
+
+As a User
+So that I can better appreciate the context of a peep
+I want to see the time at which it was made
+
+As a User
+So that I can post messages on Chitter as myself
+I want to be able to sign up, sign in to, and sign out of, Chitter
+```
+
 ## Schema
 
 <img width="896" alt="Screenshot 2023-05-26 at 15 39 27" src="https://github.com/adrianHards/flask-chitter/assets/93719632/35b91241-74a9-4958-93c9-e21b98c5a9fb">
