@@ -85,4 +85,8 @@ def test_successful_peep(db_connection, page, test_web_address):
     page.fill("input[name='email']", "test@email.com")
     page.fill("input[name='password']", "password")
     page.click('text="Sign Up"')
-    page.screenshot(path="screenshot.png")
+    page.fill("#message", "This is a test message")
+    time.sleep(1)
+    page.click('text="Peep"')
+    content = page.locator(".peep-content")
+    assert content.inner_text() == "This is a test message"
