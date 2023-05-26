@@ -64,3 +64,7 @@ This should start the server, and you should see output indicating that the app 
 ### WebSocket
 
 Be sure to open the app in two different browsers (or with one window in incognito mode) to test out WebSocket. You'll need to create two different user accounts in order to see it in action. Have fun!
+
+### Schema
+
+<img width="906" alt="Screenshot 2023-05-26 at 15 37 10" src="https://github.com/adrianHards/flask-chitter/assets/93719632/c299f664-05bd-43c5-8fda-3249a336e5a2">
