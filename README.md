@@ -67,4 +67,4 @@ Be sure to open the app in two different browsers (or with one window in incogni
 
 ### Schema
 
-<img width="906" alt="Screenshot 2023-05-26 at 15 37 10" src="https://github.com/adrianHards/flask-chitter/assets/93719632/c299f664-05bd-43c5-8fda-3249a336e5a2">
+<img width="896" alt="Screenshot 2023-05-26 at 15 39 27" src="https://github.com/adrianHards/flask-chitter/assets/93719632/35b91241-74a9-4958-93c9-e21b98c5a9fb">
