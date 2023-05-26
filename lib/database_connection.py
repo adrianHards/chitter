@@ -2,6 +2,7 @@ import os, psycopg
 from flask import g
 from psycopg.rows import dict_row
 
+
 class DatabaseConnection:
     DEV_DATABASE_NAME = "chitter"
     TEST_DATABASE_NAME = "chitter_test"
@@ -56,6 +57,7 @@ class DatabaseConnection:
             return self.TEST_DATABASE_NAME
         else:
             return self.DEV_DATABASE_NAME
+
 
 def get_flask_database_connection(app):
     if not hasattr(g, "flask_database_connection"):

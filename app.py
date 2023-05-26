@@ -3,7 +3,7 @@ import datetime
 import pytz
 import re
 from hashlib import md5
-from peewee import IntegrityError
+from peewee import IntegrityError, PostgresqlDatabase
 from flask import Flask, flash, redirect, render_template, request, session, url_for
 from flask_socketio import SocketIO, emit
 from lib.message import Message
@@ -15,8 +15,9 @@ from helpers import (
     object_list,
     get_object_or_404,
 )
-from lib.base_model import database
+
 from lib.user import User
+from lib.base_model import database
 
 app = Flask(__name__)
 app.secret_key = os.environ.get("SECRET_KEY")

@@ -9,3 +9,4 @@ class Relationship(BaseModel):
 
     class Meta:
         indexes = ((("from_user", "to_user"), True),)
+        db_table = "relationships"

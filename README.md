@@ -11,7 +11,9 @@ A Twitter clone built using [Flask](https://flask.palletsprojects.com/en/2.3.x/)
 Please ensure that you have `Python` and `Node.js` installed on your system. The following instructions were written for macOS/Linux users.
 
 ### Database
+
 Open a terminal, enter `psql`, and then the following commands:
+
 ```sql
 CREATE DATABASE chitter;
 CREATE DATABASE chitter_test;
@@ -20,10 +22,12 @@ CREATE DATABASE chitter_test;
 ```
 
 ### ENV
+
 1. Open a terminal and navigate to the root folder of the cloned repository.
 2. run `echo "SECRET_KEY='my_secret_key_value'" | tee .env`
 
 ### App
+
 1. Open a terminal and navigate to the root folder of the cloned repository.
 
 ```bash
@@ -58,4 +62,5 @@ This should start the server, and you should see output indicating that the app 
 8. Open a web browser and visit [http://localhost:5000](http://localhost:5000) to see the app in action.
 
 ### WebSocket
+
 Be sure to open the app in two different browsers (or with one window in incognito mode) to test out WebSocket. You'll need to create two different user accounts in order to see it in action. Have fun!

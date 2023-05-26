@@ -8,6 +8,11 @@ class User(BaseModel):
     email = CharField()
     join_date = DateTimeField()
 
+    # Meta is known as an inner class or a nested class, to configure metadata about the outer class.
+    # here we're telling peewee to change default name of table to users not user
+    class Meta:
+        db_table = "users"
+
     def following(self):
         from lib.relationship import Relationship
 

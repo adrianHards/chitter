@@ -11,20 +11,22 @@
 </head>
 
 <body class="bg-blue-500">
-  <a href="/" class="fixed top-0 pt-4 pb-4 w-full flex items-center justify-center bg-blue-500/75">
+
+  {% block navbar %}
+  <a href="/" class="logo fixed top-0 pt-4 pb-4 w-full flex items-center justify-center bg-blue-500/75">
     <img src="{{ url_for('static', filename='logo.svg') }}" alt="chitter logo" class="w-10">
   </a>
+
   <nav class="metanav fixed top-0 right-0">
     {% if not session.logged_in and request.path != '/sign_in/'%}
-    <div class="flex justify-end p-4">
+    <div class="sign-in flex justify-end p-4">
       <a href="/sign_in/"
-        class="bg-gray-50 hover:text-white hover:bg-blue-600 text-blue-500 text-sm font-medium py-2 px-3 rounded">
-        Sign In
-      </a>
+        class="bg-gray-50 hover:text-white hover:bg-blue-600 text-blue-500 text-sm font-medium py-2 px-3 rounded">Sign
+        In</a>
     </div>
     {% elif not session.logged_in and request.path == '/sign_in/'%}
     {% else %}
-    <div class="flex justify-end p-4">
+    <div class="sign-out flex justify-end p-4">
       <a href="/sign_out"
         class="bg-gray-50 text-blue-500 hover:bg-blue-600 hover:text-white text-sm font-medium py-2 px-4 rounded">
         Sign Out
@@ -32,6 +34,7 @@
     </div>
     {% endif %}
   </nav>
+  {% endblock %}
 
   <flash>
     {% for message in get_flashed_messages() %}

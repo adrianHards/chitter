@@ -7,3 +7,6 @@ class Message(BaseModel):
     user = ForeignKeyField(User, backref="messages")
     content = TextField()
     pub_date = DateTimeField()
+
+    class Meta:
+        db_table = "messages"
