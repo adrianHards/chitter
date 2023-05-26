@@ -70,7 +70,7 @@ Be sure to open the app in two different browsers (or with one window in incogni
 ```
 As a User
 So that I can let people know what I am doing
-I want to post a message (peep) to chitter
+I want to post a message (peep) on Chitter
 
 As a User
 So that I can see what others are saying
