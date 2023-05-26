@@ -87,7 +87,7 @@ I want to be able to sign up, sign in to, and sign out of, Chitter
 YET TO IMPLEMENT
 
 As a User
-So that I can stay constantly tapped in to Chitter
+So that I can stay tapped in to Chitter
 I want to receive an email if I am tagged in a Peep
 ```
 
