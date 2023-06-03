@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="https://github.com/adrianHards/makers-solutions/assets/93719632/981ef8f2-bf8e-424c-835c-d586e319a862" alt="kiwi" width="300">
+  <img src="https://github.com/adrianHards/makers-solutions/assets/93719632/981ef8f2-bf8e-424c-835c-d586e319a862" alt="kiwi" width="200">
 </div>
 
 # Chitter
